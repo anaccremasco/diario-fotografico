@@ -26,7 +26,7 @@ export default function TabsLayout() {
           name="galeria"
           options={{
             title: "Galeria",
-            headerTitle: "Fotos",
+            headerTitle: "Galeria",
           }}
         />
       </Tabs>

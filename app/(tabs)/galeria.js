@@ -1,4 +1,5 @@
 import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useFotos } from "../../contexts/FotosContext";
 
@@ -13,6 +14,7 @@ export default function GaleriaScreen() {
         numColumns={2}
         columnWrapperStyle={styles.coluna}
         contentContainerStyle={styles.lista}
+
         ListEmptyComponent={
           <Text style={styles.vazio}>
             Nenhuma foto ainda. Tire uma na aba Câmera.
@@ -32,24 +34,26 @@ export default function GaleriaScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#f8fbff",
+    backgroundColor: "#07060B",
   },
   lista: {
-    padding: 24,
-    gap: 16,
+    paddingHorizontal: 16,
+    paddingTop: 16,
+    paddingBottom: 24,
+    gap: 12,
   },
   coluna: {
-    justifyContent: "space-between",
+   justifyContent: "space-between",
   },
   item: {
     width: "48%",
-    gap: 6,
+    gap: 5,
   },
   foto: {
-    width: "100%",
-    aspectRatio: 3 / 4,
+   width: "100%",
+    aspectRatio: 1,
     borderRadius: 16,
-    backgroundColor: "#d0e2ff",
+    backgroundColor: "#1F1B2E",
   },
   data: {
     fontSize: 13,
@@ -57,8 +61,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   vazio: {
-    fontSize: 16,
-    color: "#334e68",
+   fontSize: 15,
+   color: "#8B8A9D",
     textAlign: "center",
+    marginTop: 40,
   },
 });
